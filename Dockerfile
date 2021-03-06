@@ -1,8 +1,5 @@
-FROM python:3.8-slim-buster
-
-WORKDIR /app
-
+FROM python:3
+WORKDIR /home/veronika/test-docker
 COPY . .
-
-CMD ["python3", "test.py"]
-
+RUN pip install -r requirements.txt
+CMD ["python3","test.py"]
